@@ -14,6 +14,27 @@
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -24,10 +45,52 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Project Manager</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+
+        <div class="logo">
+          <!-- <h1><a href="index.html">Goal Post</a></h1> -->
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+            <li><a class="nav-link scrollto" href="project_list">Projects</a></li>
+            <li><a class="nav-link scrollto" href="#">Actions</a></li>
+            <li><a class="nav-link scrollto" href="#">Issues</a></li>
+            <li><a class="nav-link scrollto" href="#">Risks</a></li>
+            <!-- <li class="dropdown"><a href="#"><span>Issues</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a href="profile-create.html ">Add User</a></li>
+                <li><a href="#">Remove User</a></li>
+                <li><a href="#">User Security</a></li>
+              </ul>
+            </li> -->
+            
+            <!-- <li class="dropdown"><a href="myprofile.html"><span id="active_usr">Profile</span> <i class="fa fa-user"></i></a>
+              <ul>
+                <li><a href="#">My account</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Log out</a></li>
+              </ul>
+            </li> -->
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+      </div>
+    </header><!-- End Header -->
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="section">
+    </section><!-- End Breadcrumbs -->
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -39,5 +102,76 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <style>
+      .SearchBar{
+          display: inline-block;
+          margin-top: 10px;
+      }
+      
+      .search-area{
+          margin: 10px;
+      }
+      
+      .collapsible-div{
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
+      }
+      
+      .max_min_button{
+          background-color: #eee;
+          color: #444;
+          cursor: pointer;
+          padding: 18px;
+          width: 100%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+      }
+      
+      .active, .max_min_button:hover {
+        background-color: #ccc;
+      }
+      
+      .max_min_button:after {
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: white;
+        float: right;
+        margin-left: 5px;
+      }
+      
+      .active:after {
+        content: "\2796"; /* Unicode character for "minus" sign (-) */
+      }
+      
+      .search-item-ranged{
+          margin: 2px;
+          width: 38px;
+          display: inherit;
+          font-size: smaller;
+      }
+      label{
+          width: 75px;
+          font-size: small;
+          word-wrap: break-word;
+          vertical-align: middle;
+      }
+      
+      .submit-area{
+          text-align: center;
+          margin-left: 10px;
+          padding: 10px;
+      }
+      
+      .submit-search{
+          margin: 0% auto;
+          display: inline-block;
+          width: 30vw;
+          padding: 2px;
+      }
+      </style>
   </body>
 </html>
